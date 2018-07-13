@@ -1,5 +1,7 @@
 import { expect } from 'chai';
 
-describe('Main', () => {
-
+describe('Spotify Wrapper', () => {
+  describe('smoke tests', () => {
+    // 90 criando smoke tests
+  });
 });
