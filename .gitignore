@@ -42,3 +42,9 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
+# Output ES5 of babel
+lib
+
+# Build Output
+dist
