@@ -7,7 +7,7 @@ import {
   searchArtists,
   searchTracks,
   searchPlaylists
-} from '../src/main';
+} from '../src/search';
 
 chai.use(sinonChai);
 

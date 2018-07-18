@@ -1,5 +1,7 @@
-import { API_URL } from './config';
-import { toJSON } from './utils';
+/* global fetch */
+
+import API_URL from './config';
+import toJSON from './utils';
 
 const token =
   'BQAyOt3WUkCYZ5uEgtXAPksYnvpI26O-oCTxE_AwQjp6u35tQ-rWsZGo2M2tNV-RYS9YvsD-w_JwbF-LNgkqHzYQL0k6MlPyS2hBhrxux-kk-QN1TjvYrjPlj2t7lbEreuwXXbGvQlsM-c2w';
