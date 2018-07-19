@@ -1,7 +1,7 @@
 import { search, searchArtists, searchAlbums, searchPlaylists } from './search';
 import { getAlbum, getAlbums, getAlbumTracks } from './album';
 
-module.exports = {
+/* module.exports = {
   search,
   searchArtists,
   searchAlbums,
@@ -9,4 +9,6 @@ module.exports = {
   getAlbum,
   getAlbums,
   getAlbumTracks
-};
+}; */
+
+export default class SpotifyWrapper {}
