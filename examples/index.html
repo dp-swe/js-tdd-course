@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <title>Spotify Wrapper Test</title>
-
 </head>
-
 <body>
 
-  <div id="albums"></div>>
+<div id="albums"></div>
 
-  <script src="../dist/spotify-wrapper.umd.js"></script>
-  <script> 
+<script src="../dist/spotify-wrapper.umd.js"></script>
 
-    const albums = spotifyWrapper.searchAlbums('Muse');
-    const albumsEl = document.getElementById('albums');
-
-    albums.then(data => {
-      markup = data.albums.items.map(item => `<img src='${item.images[0].url}' alt='${item.name}'>`).join('');
-
+<script>
+  const spotify = new SpotifyWrapper({
+    token: 'BQBGayqLhWRaz8GpAIpolLk2Ss7_ubDEhLFrjdfGjUlQVd-fzkr9sCkCh-CHtRMOYBBX9PkCXIW8Te_cCfc9xfA0OTzZVD--7ZQFLLqHoXre3SkoLjN-ctEh6tMThAf__ObZNFci43P3MjDE'
+  });
+  
+  const albums = spotify.search.albums('Muse');
+  const albumsEl = document.getElementById('albums');
+  albums
+    .then(data => {
+      markup = data.albums.items.map(item =>
+        `<img src='${item.images[0].url}' alt='${item.name}' />`
+      ).join('');
       albumsEl.innerHTML = markup;
     })
-  </script>
+</script>
 </body>
-
 </html>
