@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const pkg = require('../package.json');
+const converterBTC = require('./ConverterBTC');
+
+program
+    .version(pkg.version)
+    .description(pkg.description)
+    .option('-C --currency <currency>', 'Currency to be converted. (Default: USD)')
+    .option('-A --amount <amount>', 'Amount to be converted. (Default: 1)')
+    .parse(process.argv)
+
+console.log(converterBTC(program.currency, program.amount));
